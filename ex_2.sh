@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Storing the result path in a variable
-result=$( find $1 -size +$2 | sort -r | head -1)
+result=$( find $1 -size +$2 2> /dev/null | sort -r | head -1)
 
 # Checking whether the result exists
 if [ "$result" != "" ]; then
